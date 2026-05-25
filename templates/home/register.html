@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="color:red;">YASHWANTH TEST PAGE</h1>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+
+    <div class="card shadow-lg border-0 p-5"
+         style="
+         width: 500px;
+         background: #1e293b;
+         border-radius: 20px;
+         ">
+
+        <h1 class="text-center text-info mb-4 fw-bold">
+            Create Account
+        </h1>
+
+        <form action="/handleSignup/" method="POST">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label text-light">Username</label>
+                <input class="form-control p-3 rounded-pill"
+                       name="uname"
+                       type="text"
+                       placeholder="Enter username"
+                       required>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label text-light">First Name</label>
+                    <input class="form-control p-3 rounded-pill"
+                           name="fname"
+                           type="text"
+                           placeholder="First name">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label text-light">Last Name</label>
+                    <input class="form-control p-3 rounded-pill"
+                           name="lname"
+                           type="text"
+                           placeholder="Last name">
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-light">Email</label>
+                <input class="form-control p-3 rounded-pill"
+                       name="email"
+                       type="email"
+                       placeholder="Enter email"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-light">Profession</label>
+
+                <select class="form-select p-3 rounded-pill"
+                        name="profession">
+
+                    <option value="Employee">Employee</option>
+                    <option value="Business">Business</option>
+                    <option value="Student">Student</option>
+                    <option value="Other">Other</option>
+
+                </select>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label text-light">Income</label>
+                    <input class="form-control p-3 rounded-pill"
+                           name="income"
+                           type="text"
+                           placeholder="Income"
+                           required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label text-light">Savings</label>
+                    <input class="form-control p-3 rounded-pill"
+                           name="Savings"
+                           type="text"
+                           placeholder="Savings"
+                           required>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-light">Password</label>
+                <input class="form-control p-3 rounded-pill"
+                       name="pass1"
+                       type="password"
+                       placeholder="Enter password"
+                       required>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label text-light">Confirm Password</label>
+                <input class="form-control p-3 rounded-pill"
+                       name="pass2"
+                       type="password"
+                       placeholder="Confirm password"
+                       required>
+            </div>
+
+            <button type="submit"
+                    class="btn btn-info w-100 p-3 rounded-pill fw-bold text-white">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="text-center mt-4">
+            <a href="/" class="text-info text-decoration-none">
+                Already have an account? Login
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: expense-tracker
+    env: python
+    rootDir: .
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn ExpenseTracker.wsgi:application"

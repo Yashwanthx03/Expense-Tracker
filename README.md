@@ -232,7 +232,7 @@ ALLOWED_HOSTS = [
 
 ##  Add Expense Page
 
-![Add Expense](<img width="1266" height="592" alt="Images:dashboard" src="https://github.com/user-attachments/assets/79e644c1-ee1d-4432-a4e5-c0e04a7e354a" />
+![Add Expense](https://github.com/user-attachments/assets/79e644c1-ee1d-4432-a4e5-c0e04a7e354a)
 )
 
 ---

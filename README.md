@@ -211,31 +211,36 @@ ALLOWED_HOSTS = [
 
 ##  Login Page
 
-![Login Page](images/login.png)
+![Login Page](<img width="1264" height="589" alt="Images:login" src="https://github.com/user-attachments/assets/da79c322-cef7-4bd6-8a74-8ba689371399" />
+)
 
 ---
 
 ##  Register Page
 
-![Register Page](images/register.png)
+![Register Page](<img width="1260" height="591" alt="Images:register" src="https://github.com/user-attachments/assets/0061272a-2a81-4c53-9745-d48b685e5b64" />
+)
 
 ---
 
 ##  Dashboard
 
-![Dashboard](images/dashboard.png)
+![Dashboard](<img width="1266" height="592" alt="Images:dashboard" src="https://github.com/user-attachments/assets/f5c08d02-0dd3-48de-997e-f7a5a2a7464b" />
+)
 
 ---
 
 ##  Add Expense Page
 
-![Add Expense](images/add-expense.png)
+![Add Expense](<img width="1266" height="592" alt="Images:dashboard" src="https://github.com/user-attachments/assets/79e644c1-ee1d-4432-a4e5-c0e04a7e354a" />
+)
 
 ---
 
 ##  History Page
 
-![History](images/history.png)
+![History](<img width="1280" height="568" alt="Images:history" src="https://github.com/user-attachments/assets/2373d5da-28d2-4422-8ad5-6577c4075446" />
+)
 
 ---
 

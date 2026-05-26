@@ -1,95 +1,288 @@
-# Django-based Expense Tracker
+#  Expense Tracker Web Application
 
-A simple, efficient, and intuitive expense tracker application built with Django to help users manage and track their expenses. It includes features like user authentication, expense categorization, profile management, and detailed reporting with data visualization.
+A modern and user-friendly Expense Tracker web application built using Django. This project helps users manage daily expenses, track income, analyze spending habits, and maintain financial records efficiently through an interactive dashboard.
 
-## Key Features
-- **User Authentication**: Sign up, login, and manage user profiles.
-- **Expense Tracking**: Add, edit, and delete expenses categorized by type (e.g., Food, Transport, etc.).
-- **Category Management**: Manage and assign categories to expenses.
-- **Reporting**: Generate expense reports based on selected timeframes (daily, monthly, yearly).
-- **Data Visualization**: Visualize expenses using charts and graphs.
+---
 
-## Technologies Used
-- **Django** (Backend Framework)
-- **Python** (Programming Language)
-- **SQLite** (Database)
-- **HTML/CSS** (Frontend)
-- **JavaScript** (Dynamic Elements)
-- **Matplotlib** (Data Visualization)
-- **Django Rest Framework** (For potential API development)
-- **JWT** (Authentication)
+#  Live Demo
 
-## Installation
+ https://expense-tracker-ld4c.onrender.com
 
-Follow these steps to set up the project locally:
+---
 
-### 1. Clone the Repository
-Clone the repository to your local machine:
+#  Features
+
+-  User Authentication System
+-  User Profile Management
+-  Add Income Records
+-  Add Expense Records
+-  Edit Expense & Income Details
+-  Delete Records
+-  Weekly Expense Reports
+-  Monthly Expense Reports
+-  Yearly Expense Analysis
+-  Expense History Tracking
+-  Dashboard Summary
+-  Responsive UI Design
+-  Cloud Deployment using Render
+
+---
+
+#  Technologies Used
+
+## Backend
+- Python
+- Django
+
+## Frontend
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+
+## Database
+- SQLite3
+
+## Deployment & Server
+- Render
+- Gunicorn
+- WhiteNoise
+
+## Version Control
+- Git
+- GitHub
+
+---
+
+#  Project Structure
+
 ```bash
-git clone (https://github.com/gauravdev01/Expense-Tracker)
-cd expense-tracker
+Expense-Tracker/
+│
+├── ExpenseTracker/
+├── home/
+├── templates/
+├── static/
+├── media/
+├── staticfiles/
+├── manage.py
+├── requirements.txt
+├── runtime.txt
+├── build.sh
+└── render.yaml
 ```
-### 2. Create a Virtual Environment (Optional but recommended)
-It's recommended to use a virtual environment for managing dependencies. You can create one by running:
+
+---
+
+#  Installation Guide
+
+##  Clone Repository
+
+```bash
+git clone https://github.com/Yashwanthx03/Expense-Tracker.git
+cd Expense-Tracker
+```
+
+---
+
+##  Create Virtual Environment
+
+### Windows
+
 ```bash
 python -m venv venv
-```
-Activate the virtual environment:
-On Windows:
-```bash
 venv\Scripts\activate
 ```
-On Mac/Linux:
+
+### Mac/Linux
+
 ```bash
+python3 -m venv venv
 source venv/bin/activate
 ```
-### 3. Install Dependencies
-Install the required Python packages:
+
+---
+
+##  Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-### 4. Set Up the Database
-Run the migrations to set up the database:
-Python Expense Tracker Output:
+
+---
+
+##  Apply Database Migrations
+
 ```bash
 python manage.py migrate
 ```
-### 5. Create a Superuser (for Admin Access)
-If you want to access the Django admin panel, create a superuser:
+
+---
+
+##  Create Superuser (Optional)
+
 ```bash
 python manage.py createsuperuser
 ```
-Follow the prompts to set the username, email, and password.
 
-### 6. Run the Development Server
-Start the development server to run the application:
+---
+
+##  Collect Static Files
+
+```bash
+python manage.py collectstatic
+```
+
+Type:
+
+```bash
+yes
+```
+
+---
+
+##  Run Development Server
+
 ```bash
 python manage.py runserver
 ```
-The application should now be accessible at http://127.0.0.1:8000/
 
-**Usage**
+Application will run at:
 
-**Accessing the Application:** Visit http://127.0.0.1:8000/ in your web browser to start using the expense tracker.
+```bash
+http://127.0.0.1:8000/
+```
 
-**Admin Panel:** Access the Django admin panel at http://127.0.0.1:8000/admin/ using the superuser credentials created earlier.
+---
 
-Login Form:
-![image](https://github.com/gauravdev01/Expense-Tracker/assets/109756079/fd0af81e-2642-41d6-95bc-2e3e0d16785e)
+#  Deployment on Render
 
-Dashboard:
-![image](https://github.com/gauravdev01/Expense-Tracker/assets/109756079/a065a8d2-ac76-4794-bf7e-91e39b871cf9)
+This project is deployed using Render.
 
-![image](https://github.com/gauravdev01/Expense-Tracker/assets/109756079/7d88987f-f3f8-4860-a282-4d6acf2767d2)
+## Deployment Files Used
 
-Monthly Expense Page:
+### runtime.txt
 
-![image](https://github.com/gauravdev01/Expense-Tracker/assets/109756079/144d7909-36ef-4416-8444-d21ffaad1a0b)
+```txt
+python-3.11.9
+```
 
-History Page:
+### Build Command
 
-![image](https://github.com/gauravdev01/Expense-Tracker/assets/109756079/3b573e71-1ca1-4ec7-9131-7914ea52c324)
+```bash
+pip install setuptools==69.5.1 && pip install -r requirements.txt
+```
 
-Summary
+### Start Command
 
-I have successfully created the expense tracker project in python. We learned a variety of concepts while making this project.
+```bash
+gunicorn ExpenseTracker.wsgi --log-file -
+```
+
+---
+
+#  Important Django Settings
+
+```python
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+
+ALLOWED_HOSTS = [
+    'expense-tracker-ld4c.onrender.com',
+    '127.0.0.1'
+]
+```
+
+---
+
+#  Project Screenshots
+
+##  Login Page
+
+![Login Page](images/login.png)
+
+---
+
+##  Register Page
+
+![Register Page](images/register.png)
+
+---
+
+##  Dashboard
+
+![Dashboard](images/dashboard.png)
+
+---
+
+##  Add Expense Page
+
+![Add Expense](images/add-expense.png)
+
+---
+
+##  History Page
+
+![History](images/history.png)
+
+---
+
+#  Challenges Faced During Deployment
+
+While deploying this project on Render, several issues were solved successfully:
+
+- Static files not loading
+- STATIC_ROOT configuration issue
+- pkg_resources module error
+- Python version compatibility issue
+- cgi module error
+- DisallowedHost error
+- Gunicorn configuration problems
+- Render root directory configuration
+
+All deployment issues were debugged and fixed successfully.
+
+---
+
+#  What I Learned
+
+Through this project, I learned:
+
+- Django Project Structure
+- User Authentication System
+- CRUD Operations
+- Template Rendering
+- Static Files Management
+- Django Deployment
+- Git & GitHub Workflow
+- Render Deployment Process
+- Debugging Production Errors
+- WhiteNoise Configuration
+- Gunicorn Server Setup
+
+---
+
+#  Author
+
+## Yashwanth
+
+GitHub:
+https://github.com/Yashwanthx03
+
+---
+
+#  Final Note
+
+This project was built for learning full-stack Django development and deployment. It demonstrates backend development, frontend integration, database handling, authentication, static file management, and cloud deployment in a real-world project.
